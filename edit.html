@@ -34,211 +34,11 @@
 
 
         </style>
+   
     </head>
     <body>
     <div id="wrapper" class="width2">
-		<h1>{Title}</h1>
-
-        {block:Description}
-            <p class="description">{Description}</p>
-        {/block:Description}
-
-        <ol id="posts">
-            {block:Posts}
-                {block:Text}
-                    <li class="post text">
-                        {block:Title}
-                            <h2><a href="{Permalink}">{Title}</a></h2>
-                        {/block:Title}
-
-                        {Body}
-                    </li>
-                {/block:Text}
-
-                {block:Photo}
-                    <li class="post photo">
-                      <a href="{Permalink}">  <img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
-
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-
-                      {block:NoteCount}
-
-                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-                    
-                    {/block:NoteCount}
-                    
-                    {block:PostNotes}  
-
-                    <p>Notes:</p>
-                    {PostNotes}
-
-                    {/block:PostNotes}
-                    
-                    </li>
-
-                {/block:Photo}
-                
-                {block:Photoset}
-                    <li class="post photoset">
-                        {Photoset-500}
-
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-                    </li>
-                    
-                    {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
-                {/block:Photoset}
-
-                {block:Quote}
-                    <li class="post quote">
-                        "{Quote}"
-
-                        {block:Source}
-                            <div class="source">{Source}</div>
-         
-                        {/block:Source}
-         
-                       {block:NoteCount}
-
-                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-                    
-                    {/block:NoteCount}
-                    
-                    {block:PostNotes}  
-
-                    <p>Notes:</p>
-                    {PostNotes}
-
-                    {/block:PostNotes}
-                    </li>
-         
-                {/block:Quote}
-
-                {block:Link}
-                    <li class="post link">
-                        <a href="{URL}" class="link" {Target}>{Name}</a>
-
-                        {block:Description}
-                            <div class="description">{Description}</div>
-                        {/block:Description}
-                        
-                    </li>
-                     {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
-                {/block:Link}
-
-                {block:Chat}
-                    <li class="post chat">
-                        {block:Title}
-                            <h2><a href="{Permalink}">{Title}</a></h2>
-                        {/block:Title}
-
-                        <ul class="chat">
-                            {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
-                                    {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}
-
-                                    {Line}
-                                    
-                                    
-                                                  {block:NoteCount}
-
-                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-                    
-                    {/block:NoteCount}
-                    
-                    {block:PostNotes}  
-
-                    <p>Notes:</p>
-                    {PostNotes}
-
-                    {/block:PostNotes}
-                                </li>
-                                
-                                     {/block:Chat}
-
-                {block:Video}
-                    <li class="post video">
-                        {Video-500}
-
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-                                  {block:NoteCount}
-
-                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-                    
-                    {/block:NoteCount}
-                    
-                    {block:PostNotes}  
-
-                    <p>Notes:</p>
-                    {PostNotes}
-
-                    {/block:PostNotes}
-                    </li>
-                    
-                                    {/block:Video}
-
-                {block:Audio}
-                    <li class="post audio">
-                        {AudioPlayerBlack}
-
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-                             {block:NoteCount}
-
-                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-                    
-                    {/block:NoteCount}
-                    
-                    {block:PostNotes}  
-
-                    <p>Notes:</p>
-                    {PostNotes}
-
-                    {/block:PostNotes}
-                    </li>
-               
-            {/block:Posts}
-        </ol>
-
-        <p id="footer">
-            {block:PreviousPage}
-                <a href="{PreviousPage}">&#171; Previous</a>
-            {/block:PreviousPage}
-
-            {block:NextPage}
-                <a href="{NextPage}">Next &#187;</a>
-            {/block:NextPage}
-
-            <a href="/archive">Archive</a>
-        </p>
-        
-        </div><!-- Wrapper -->
-    </body>
-</html>}
-
-        </style>
-    </head>
-    <body>
-    <div id="wrapper" class="width2">
-        <h1><a href="/">{Title}</a></h1>
+        <h1>{Title}</h1>
 
         {block:Description}
             <p id="description">{Description}</p>
@@ -263,19 +63,14 @@
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
-                    </li>
+
                       {block:NoteCount}
                <div class="notecount">
                     <a href="{Permalink}">{NoteCountWithLabel}</a>
                     </div>
                     {/block:NoteCount}
                     
-                    {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+                    </li>          
                     
 
 
@@ -290,12 +85,7 @@
                         {/block:Caption}
                     </li>
                     
-                    {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+          
                 {/block:Photoset}
 
                 {block:Quote}
@@ -306,12 +96,7 @@
                             <div class="source">{Source}</div>
                         {/block:Source}
                     </li>
-                    {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+          
                 {/block:Quote}
 
                 {block:Link}
@@ -323,12 +108,7 @@
                         {/block:Description}
                         
                     </li>
-                     {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+           
                 {/block:Link}
 
                 {block:Chat}
@@ -347,22 +127,12 @@
                                     {Line}
                                 </li>
                                 
-                     {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+           
                             {/block:Lines}
                         </ul>
                     </li>
                     
-                    {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+          
                 {/block:Chat}
 
                 {block:Video}
@@ -374,12 +144,7 @@
                         {/block:Caption}
                     </li>
                     
-                     {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+           
                 {/block:Video}
 
                 {block:Audio}
@@ -390,27 +155,18 @@
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
                     </li>
-                          {block:PostNotes}  
-                    <div class="postnotes">
-                    <p>Notes:</p>
-                    {PostNotes}
-                    </div>
-                    {/block:PostNotes}
+                
                 {/block:Audio}
-                            {PostNotes}
+
 
             {/block:Posts}
         </ol>
 
         <p id="footer">
-            {block:PreviousPage}
-                <a href="{PreviousPage}">&#171; Previous</a>
-            {/block:PreviousPage}
-
-            {block:NextPage}
-                <a href="{NextPage}">Next &#187;</a>
-            {/block:NextPage}
-
+	
+{block:Pagination}
+	{block:PreviousPage}<a href="{PreviousPage}">Previous &mdash; </a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
+{/block:Pagination}
             <a href="/archive">Archive</a>
         </p>
         
