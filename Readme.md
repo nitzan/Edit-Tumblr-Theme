@@ -1,3 +1,5 @@
-WIP — Simple Tumblr theme, using baselinecss.com.
+Simple Tumblr theme, using http://baselinecss.com
 
-Using https://github.com/mwunsch/thimble for dev.
+Using https://github.com/mwunsch/thimble for dev
+
+Demo : http://tumblr.byed.it/
