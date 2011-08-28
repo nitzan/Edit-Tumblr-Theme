@@ -31,13 +31,16 @@
         a{text-decoration: none;color:#0018A1;border-bottom: 1 px solid #0018A1;}
 		
 		.description{font-style: italic;}
+		img{max-width:80%;height:auto;}
+		
+		.caption{margin:1em 0 0 0;}
 
 
         </style>
    
     </head>
     <body>
-    <div id="wrapper" class="width2">
+    <div id="wrapper" class="width3">
         <h1><a href="/">{Title}</a></h1>
 
 
@@ -70,7 +73,7 @@
 
                 {block:Photo}
                     <li class="post photo">
-                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                        <a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
 
                         {block:Caption}
                             <div class="caption">{Caption}</div>
