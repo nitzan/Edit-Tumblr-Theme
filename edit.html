@@ -1,5 +1,5 @@
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
@@ -9,7 +9,7 @@
         {/block:Description}
         
         <style type="text/css">
-        
+        /*more at https://github.com/nitzan/Edit-Tumblr-Theme*/
         /* Baseline - a designer framework, Copyright (C) 2009 Stephane Curzi, ProjetUrbain.com, Creative Commons Attribution-Share Alike 3.0 License */
         /* reset */
         html,body,div,span,a,img,h1,h2,h2,h4,h5,h6,hgroup,p,dl,dialog,dt,dd,ol,ul,li,abbr,acronym,address,b,big,blockquote,cite,code,del,dfn,em,i,ins,kbd,pre,q,samp,tt,var,small,strong,sub,sup,object,iframe,form,fieldset,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,footer,header,nav,section,figure,menu,time,mark,audio,video{font-family:inherit;font-size:100%;font-weight:inherit;font-style:inherit;vertical-align:baseline;white-space:normal;text-align:left;margin:0;padding:0;border:0;outline:0;background:transparent}textarea{font-family:inherit;font-size:100%;font-weight:normal;font-style:normal;white-space:normal;text-align:left;margin:0;padding:0}article,aside,footer,header,nav,section,dialog,figure,hgroup,menu{display:block}h1,h2,h2,h4,h5,h6{font-size:100%;font-weight:normal}del,ins{text-decoration:none}ol,ul{list-style:none}nav ul{list-style-type:none}table{border-collapse:separate;border-spacing:0;background-color:transparent;width:auto;height:auto}:focus{outline:0}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}input{margin:0}applet,basefont,dir,font,isindex,menu,s,strike,u{font-family:inherit;font-size:100%;font-weight:normal;font-style:normal;white-space:normal;vertical-align:baseline;text-decoration:inherit;text-align:left;color:inherit;margin:0;padding:0;border:0;outline:0}dir,menu{list-style:none}nobr{white-space:normal}blink{text-decoration:none}marquee{overflow:visible}
@@ -31,17 +31,20 @@
         a{text-decoration: none;color:#0018A1;border-bottom: 1 px solid #0018A1;}
 		
 		.description{font-style: italic;}
+	
 		img{max-width:80%;height:auto;}
-		
 		.caption{margin:1em 0 0 0;}
-
-
+		
+		/* Custom CSS*/
+		  {CustomCSS}
+		
         </style>
    
     </head>
     <body>
     <div id="wrapper" class="width3">
-        <h1><a href="/">{Title}</a></h1>
+	  {block:IfHeaderImage}<img src="{image:Header}"/>{/block:IfHeaderImage}
+	        {block:IfNotHeaderImage}<h1>{Title}</h1>{/block:IfNotHeaderImage}
 
 
         {block:Description}
@@ -165,41 +168,26 @@
            
                 {/block:Link}
 
-                {block:Chat}
-                    <li class="post chat">
-                        {block:Title}
-                            <h2><a href="{Permalink}">{Title}</a></h2>
-                        {/block:Title}
+    			{block:Chat}
+				                    <li class="post chat">
+				                        {block:Title}
+				                            <h2><a href="{Permalink}">{Title}</a></h2>
+				                        {/block:Title}
 
-                        <ul class="chat">
-                            {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
-                                    {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}
+				                        <ul class="chat">
+				                            {block:Lines}
+				                                <li class="{Alt} user_{UserNumber}">
+				                                    {block:Label}
+				                                        <span class="label">{Label}</span>
+				                                    {/block:Label}
 
-                                    {Line}
-
-                                </li>
-                                
-           
-                            {/block:Lines}
-                        </ul>
-						           {block:NoteCount}
-				               <div class="notecount">
-				                    <a href="{Permalink}">{NoteCountWithLabel}</a>
-				                    </div>
-				                    {/block:NoteCount}
-						          {block:PostNotes}  
-						                    <div class="postnotes">
-						                    <p>Notes:</p>
-						                    {PostNotes}
-						                    </div>
-						                    {/block:PostNotes}
-                    </li>
-                    
-          
-                {/block:Chat}
+				                                    {Line}
+				                                </li>
+				                            {/block:Lines}
+				                        </ul>
+				                    </li>
+				  {/block:Chat}
+	
 
                 {block:Video}
                     <li class="post video">
