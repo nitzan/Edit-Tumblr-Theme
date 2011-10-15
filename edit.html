@@ -7,6 +7,10 @@
         {block:Description}
             <meta name="description" content="{MetaDescription}" />
         {/block:Description}
+
+
+
+
         
         <style type="text/css">
         /*more at https://github.com/nitzan/Edit-Tumblr-Theme*/
@@ -43,8 +47,19 @@
     </head>
     <body>
     <div id="wrapper" class="width3">
-	  {block:IfHeaderImage}<img src="{image:Header}"/>{/block:IfHeaderImage}
-	        {block:IfNotHeaderImage}<h1>{Title}</h1>{/block:IfNotHeaderImage}
+	  
+	
+	{block:IfHeaderImage}
+	
+		<img src="{image:Header}"/>
+	
+	{/block:IfHeaderImage}
+	
+	 {block:IfNotHeaderImage}
+			
+			<h1>{Title}</h1>
+	
+	{/block:IfNotHeaderImage}
 
 
         {block:Description}
@@ -76,7 +91,10 @@
 
                 {block:Photo}
                     <li class="post photo">
-                        <a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+                        
+					    {LinkOpenTag}
+							<a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+					    {LinkCloseTag}
 
                         {block:Caption}
                             <div class="caption">{Caption}</div>
@@ -243,7 +261,7 @@
 {block:Pagination}
 	{block:PreviousPage}<a href="{PreviousPage}">Previous &mdash; </a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
 {/block:Pagination}
-            <a href="/archive">Archive</a> <a href="https://github.com/nitzan/Edit-Tumblr-Theme">Get Theme</a>
+            <a href="/archive">Archive</a> <a href="http://www.tumblr.com/theme/31942">Get Theme</a>
         </p>
         
         </div><!-- Wrapper -->
