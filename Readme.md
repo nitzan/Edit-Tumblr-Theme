@@ -2,7 +2,7 @@ High res images enabled — thanks to Pat Dryburgh http://patdryburgh.com/blog/
 
 Please make sure that you have high res images enabled for your Tumblr http://l.byed.it/9eQm [screen shot]
 
-Demo : http://tumblr.byed.it/
+Demo : http://blog.byed.it/
 
 Tools:
 (1) CSS framework http://baselinecss.com

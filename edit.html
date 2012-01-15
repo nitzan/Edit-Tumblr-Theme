@@ -5,6 +5,7 @@
 
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
+
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         {block:Description}
             <meta name="description" content="{MetaDescription}" />
@@ -39,7 +40,7 @@
 
 		/*images and captions*/    	
 		.description{font-style: italic;}
-		img{max-width:80%;height:auto;}
+		img, embed, iframe{max-width:80%;height:auto;}
 		.caption{margin:1em 0 0 0;}
 
 		/*likes*/
@@ -297,13 +298,16 @@
             {/block:Posts}
         </ol>
 
-        <footer id="footer" class="column">
-	
-{block:Pagination}
-	{block:PreviousPage}<a href="{PreviousPage}">Previous &mdash; </a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
-{/block:Pagination}
-            <a href="/archive">Archive</a> <a href="https://github.com/nitzan/Edit-Tumblr-Theme">Get Theme</a>
-        </footer>
+                <footer id="footer" class="column">
+
+		{block:Pagination}
+		<div class="navigation">
+			{block:PreviousPage}<a href="{PreviousPage}">Previous &mdash; </a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
+		{/block:Pagination}
+
+		            &#8195; <a href="/archive">Archive</a> &#8195; <a href="https://github.com/nitzan/Edit-Tumblr-Theme">Get Theme</a>
+		</div>
+		</footer>
         
         </div><!-- Wrapper -->
 <script type="text/javascript">
